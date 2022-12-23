@@ -14,10 +14,10 @@ public class MyLinkedQueue<E> {
         return data.getFirst();
     }
 
-    public static void main(String[] args) {
-        MyLinkedQueue<Integer> q = new MyLinkedQueue<>();
-        q.offer(1);
-        q.offer(2);
-        System.out.println(q.poll());
-    }
+//    public static void main(String[] args) {
+//        MyLinkedQueue<Integer> q = new MyLinkedQueue<>();
+//        q.offer(1);
+//        q.offer(2);
+//        System.out.println(q.poll());
+//    }
 }
