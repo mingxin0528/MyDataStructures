@@ -111,22 +111,4 @@ public class MyArrayList<E>{
     }
 
 
-//    public static void main(String[] args) {
-//        MyArrayList<Integer> myArr = new MyArrayList<>(4);
-//        myArr.add(1);
-//        myArr.add(1);
-//        myArr.add(1);
-//        myArr.display();
-//
-//        myArr.add(100);
-//        myArr.display();
-//        myArr.add(1999);
-//        myArr.display();
-//        myArr.set(0,528);
-//        myArr.display();
-//        myArr.remove(1);
-//        myArr.display();
-//
-//    }
-
 }

@@ -23,7 +23,6 @@ public class Slot<K,V> {
             value = newVal;
             return oldVal;
         }
-
     }
 
     private MySinglyLinkedList<Map.Entry<K,V>> lala ;
