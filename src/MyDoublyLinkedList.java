@@ -1,10 +1,29 @@
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class MyDoublyLinkedList<E> {
+public class MyDoublyLinkedList<E> implements Iterable<E>{
 
     final private Node<E> head, tail;
     private static int size;
+
+    @Override
+    public Iterator<E> iterator() {
+        return new Iterator<E>() {
+            Node<E> p = head.next;
+            @Override
+            public boolean hasNext() {
+                return p!= tail;
+            }
+
+            @Override
+            public E next() {
+                E val = p.val;
+                p = p.next;
+                return val;
+            }
+        };
+    }
 
     private static class Node<E>{
         E val;
