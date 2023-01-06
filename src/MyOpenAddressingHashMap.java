@@ -1,5 +1,4 @@
-import java.util.Map;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class MyOpenAddressingHashMap<K,V> {
     private int size;
@@ -106,12 +105,22 @@ public class MyOpenAddressingHashMap<K,V> {
 
     public int getNodeIndex(K key){
         for(int i = hash(key); table[i] != null; i = (i + 1) % table.length){
-            if(table[i].getKey() == key){
+            if(table[i].getKey().equals(key)){
                 return i;
             }
         }
         return -1;
     }
+    public List<K> keys(){
+        LinkedList<K> entryList = new LinkedList<>();
+        for(kvNode<K,V> entry : table){
+            if(entry != null){
+                entryList.add(entry.getKey());
+            }
+        }
+        return entryList;
+    }
+
 
     public int size(){
         return size;
@@ -139,17 +148,10 @@ public class MyOpenAddressingHashMap<K,V> {
 //        MyOpenAddressingHashMap<Integer,Integer> hm = new MyOpenAddressingHashMap();
 //        System.out.println(hm.isEmpty());
 //        hm.put(1,100);
-//        System.out.println(hm.isEmpty());
-//        System.out.println(hm.get(1));
 //        hm.put(2,200);
-//        System.out.println(hm.get(2));
 //        hm.put(3,300);
-//        System.out.println(hm.get(3));
-//        hm.put(0,0);
-//        System.out.println(hm.get(0));
-//        System.out.println(hm.table.length);
-//        hm.remove(3);
-//        System.out.println(hm.size());
+//        hm.remove(2);
+//        System.out.println(hm.get(2));
 //    }
 
 }

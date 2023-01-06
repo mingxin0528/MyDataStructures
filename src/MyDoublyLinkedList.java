@@ -195,23 +195,16 @@ public class MyDoublyLinkedList<E> implements Iterable<E>{
     };
 
 
-//    public static void main(String[] args) {
-//        MyDoublyLinkedList lala = new MyDoublyLinkedList<>();
-//        lala.addLast(1);
-//        lala.addLast(2);
-//        lala.addFirst(0);
-//        lala.add(0,100);
-//        lala.display();
-//        lala.remove(2);
-//        lala.display();
-//        lala.removeFirst();
-//        lala.removeLast();
-//        lala.display();
-//        lala.set(0,100);
-//        System.out.println(lala.getFirst());
-//        System.out.println(lala.getLast());
-//        System.out.println(lala.get(0));
-//    }
+    public static void main(String[] args) {
+        MyDoublyLinkedList lala = new MyDoublyLinkedList<>();
+        lala.addLast(1);
+        lala.addLast(2);
+        lala.addFirst(0);
+        lala.add(0,100);
+        lala.display();
+        lala.remove(0);
+        lala.display();
+    }
 
 
 
